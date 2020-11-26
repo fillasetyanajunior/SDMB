@@ -9,7 +9,7 @@
             </ul>
             <div class="social_area">
                 <ul class="social_nav">
-                <li class="facebook"><a href="#"></a></li>
+                <li class="facebook"><a href="https://www.facebook.com/muhammadiyah.buleleng.1"></a></li>
                 <li class="youtube"><a href="#"></a></li>
                 <li class="mail"><a href="#"></a></li>
                 </ul>

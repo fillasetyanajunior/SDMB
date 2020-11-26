@@ -33,7 +33,7 @@ class SubuserSeeder extends Seeder
         ]);
         DB::table('subusers')->insert([
             'title' => 'Post Kiprah Umat',
-            'url' => '/postkiprahumat'
+            'url' => '/postkiprah'
         ]);
         DB::table('subusers')->insert([
             'title' => 'Post Seni Budaya',

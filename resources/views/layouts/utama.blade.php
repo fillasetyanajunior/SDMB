@@ -46,8 +46,6 @@
             <div class="header_bottom">
                 <div class="logo_area">
                     <a href="/" class="logo"><img src="{{url('assets/images/logo2.jpeg')}}" alt=""></a>
-                    <h1 class="text-center" style="color:	#00FFFF">SUARA DAKWAH MU</h1>
-                    <h3 class="text-center" style="color:	gold">Syiar Dakwah Berkemajuan</h3>
                 </div>
                 <div class="add_banner"><a href="/"><img src="{{url('assets/images/Banner1.jpeg')}}" alt=""></a></div>
             </div>
@@ -85,7 +83,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="footer_widget wow fadeInLeftBig">
                 <h2></h2>
-                <img src="{{url('assets/images/Logo2.jpeg')}}" alt="" width="340px">
+                <img src="{{url('assets/images/logo2.jpeg')}}" alt="" width="340px">
                 <p>Menyuarakan Kebaikan</p>
                 </div>
             </div>
