@@ -79,7 +79,10 @@ class AccessadminController extends Controller
     public function update(Request $request, Accessadmin $accessadmin)
     {
         Accessadmin::where('id',$accessadmin->id)
-                    ->update($request->all());
+        ->update([
+            'menu_id' => $request->menu_id,
+            'sub_id' => $request->sub_id,
+        ]);
         return redirect('/accessadmin')->with('status','Access Admin Berhasil Di Update');
     }
 

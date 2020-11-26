@@ -83,7 +83,10 @@ class MenuuserController extends Controller
             'icon' => 'required',
         ]);
         Menuuser::where('id',$menuuser->id)
-                ->update($request->all());
+        ->update([
+            'title' => $request->title,
+            'icon' => $request->icon,
+        ]);
         return redirect('/menuuser')->with('status','Menu User Berhasil Di Update');
     }
 

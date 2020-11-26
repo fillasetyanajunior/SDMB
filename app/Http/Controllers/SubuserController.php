@@ -79,7 +79,10 @@ class SubuserController extends Controller
     public function update(Request $request, Subuser $subuser)
     {
         Subuser::where('id',$subuser->id)
-                ->update($request->all());
+                ->update([
+                    'title' => $request->title,
+                    'url' => $request->url,
+                ]);
         return redirect('/subuser')->with('status','Sub Menu User Berhasil Di Hapus');
     }
 

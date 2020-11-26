@@ -79,7 +79,10 @@ class MenuadminController extends Controller
     public function update(Request $request, Menuadmin $menuadmin)
     {
         Menuadmin::where('id',$menuadmin->id)
-                ->update($request->all());
+        ->update([
+            'title' => $request->title,
+            'icon' => $request->icon,
+        ]);
         return redirect('/menuadmin')->with('status','Menu Admin Berhasil Di Update');
     }
 

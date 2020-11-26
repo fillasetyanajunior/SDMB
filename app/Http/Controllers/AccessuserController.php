@@ -79,7 +79,10 @@ class AccessuserController extends Controller
     public function update(Request $request, Accessuser $accessuser)
     {
         Accessuser::where('id',$accessuser->id)
-                    ->update($request->all());
+        ->update([
+            'menu_id' => $request->menu_id,
+            'sub_id' => $request->sub_id,
+        ]);
         return redirect('/accessuser')->with('status','Access User Berhasil Di Update');
     }
 

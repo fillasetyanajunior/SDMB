@@ -79,7 +79,10 @@ class SubadminController extends Controller
     public function update(Request $request, Subadmin $subadmin)
     {
         Subadmin::where('id',$subadmin->id)
-                ->update($request->all());
+        ->update([
+            'title' => $request->title,
+            'url' => $request->url,
+        ]);
         return redirect('/subadmin')->with('status','Sub Menu Admin Berhasil Di Update');
     }
 
