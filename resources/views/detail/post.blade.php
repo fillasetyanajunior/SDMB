@@ -15,8 +15,28 @@
                     </ol>
                     <h1>{{$post->judul}}</h1>
                     <div class="post_commentbox"><span><i class="fa fa-calendar"></i>{{$post->updated_at->diffForHumans()}}</span> <a href="/"><i class="fa fa-tags"></i>Post</a> </div>
-                    <div class="single_page_content"> <img class="img-center" src="{{asset('/' . $post->foto)}}" alt="">
+                    <div class="single_page_content">
+                        @if ($post->post == "kultum")
+                        <iframe width="100" height="50" src="{{$post->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        @elseif ($post->post == "aisyiyah")
+                        <img class="img-center" src="{{asset('aisyiyah/' . $post->foto)}}" ></a>
+                        @elseif ($post->post == "tokoh")
+                        <img src="{{asset('tokoh/' . $post->foto)}}" ></a>
+                        @elseif ($post->post == "milenial")
+                        <img class="img-center" src="{{asset('milenial/' . $post->foto)}}" ></a>
+                        @elseif ($post->post == "kiprah")
+                        <img class="img-center" src="{{asset('kiprah/' . $post->foto)}}" ></a>
+                        @elseif ($post->post == "seni")
+                        <img class="img-center" src="{{asset('seni/' . $post->foto)}}" ></a>
+                        @elseif ($post->post == "saudagar")
+                        <img class="img-center" src="{{asset('saudagar/' . $post->foto)}}" ></a>
+                        @elseif ($post->post == "infopersyarikatan")
+                        <img class="img-center" src="{{asset('infopersyarikatan/' . $post->foto)}}" ></a>
+                        @elseif ($post->post == "artikel")
+                        <img class="img-center" src="{{asset('artikel/' . $post->foto)}}" ></a>
+                        @endif
                         <p class="text-justify">{{$post->caption}}</p>
+                        
                         <button class="btn default-btn">Milenial Muhammadiyah</button>
                         <button class="btn btn-red">Kultum</button>
                         <button class="btn btn-yellow">Tokoh</button>
