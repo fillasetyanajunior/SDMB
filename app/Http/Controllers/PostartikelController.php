@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Postartikel;
 use App\Post;
 use Illuminate\Http\Request;
+use File;
 
 class PostartikelController extends Controller
 {

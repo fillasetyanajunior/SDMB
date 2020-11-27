@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Postinfopersyarikatan;
 use App\Post;
 use Illuminate\Http\Request;
+use File;
 
 class PostinfopersyarikatanController extends Controller
 {

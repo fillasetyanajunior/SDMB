@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Postsejarah;
 use Illuminate\Http\Request;
+use File;
 
 class PostsejarahController extends Controller
 {

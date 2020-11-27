@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Posttokoh;
 use App\Post;
 use Illuminate\Http\Request;
+use File;
 
 class PosttokohController extends Controller
 {

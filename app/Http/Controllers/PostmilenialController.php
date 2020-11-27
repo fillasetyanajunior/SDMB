@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Postmilenial;
 use App\Post;
 use Illuminate\Http\Request;
+use File;
 
 class PostmilenialController extends Controller
 {

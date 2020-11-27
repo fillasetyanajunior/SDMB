@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Postsaudagar;
 use App\Post;
 use Illuminate\Http\Request;
+use File;
 
 class PostsaudagarController extends Controller
 {

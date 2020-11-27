@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Postseni;
 use App\Post;
 use Illuminate\Http\Request;
+use File;
 
 class PostseniController extends Controller
 {
