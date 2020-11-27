@@ -32,6 +32,7 @@ Route::get('/detail/postmilenial/{postmilenial}', 'DetailController@milenial');
 Route::get('/detail/postsaudagar/{postsaudagar}', 'DetailController@saudagar');
 Route::get('/detail/postseni/{postseni}', 'DetailController@seni');
 Route::get('/detail/postsejarah/{postsejarah}', 'DetailController@sejarah');
+Route::get('/detail/post/{post}', 'DetailController@post');
 
 // Comment
 Route::post('/coment', 'DetailController@store');

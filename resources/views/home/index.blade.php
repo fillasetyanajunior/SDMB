@@ -11,23 +11,23 @@
                 @foreach ($posts as $posts)    
                 <div class="single_iteam"> 
                     @if ($posts->post == "kultum")
-                    <a href=""><iframe width="650" height="500" src="{{$posts->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                    <a href="/detail/post/{{$posts->id}}"><iframe width="650" height="500" src="{{$posts->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
                     @elseif ($posts->post == "aisyiyah")
-                    <a href=""> <img src="{{asset('aisyiyah/' . $posts->foto)}}" ></a>
+                    <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('aisyiyah/' . $posts->foto)}}" ></a>
                     @elseif ($posts->post == "tokoh")
-                    <a href=""> <img src="{{asset('tokoh/' . $posts->foto)}}" ></a>
+                    <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('tokoh/' . $posts->foto)}}" ></a>
                     @elseif ($posts->post == "milenial")
-                    <a href=""> <img src="{{asset('milenial/' . $posts->foto)}}" ></a>
+                    <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('milenial/' . $posts->foto)}}" ></a>
                     @elseif ($posts->post == "kiprah")
-                    <a href=""> <img src="{{asset('kiprah/' . $posts->foto)}}" ></a>
+                    <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('kiprah/' . $posts->foto)}}" ></a>
                     @elseif ($posts->post == "seni")
-                    <a href=""> <img src="{{asset('seni/' . $posts->foto)}}" ></a>
+                    <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('seni/' . $posts->foto)}}" ></a>
                     @elseif ($posts->post == "saudagar")
-                    <a href=""> <img src="{{asset('saudagar/' . $posts->foto)}}" ></a>
+                    <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('saudagar/' . $posts->foto)}}" ></a>
                     @elseif ($posts->post == "infopersyarikatan")
-                    <a href=""> <img src="{{asset('infopersyarikatan/' . $posts->foto)}}" ></a>
+                    <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('infopersyarikatan/' . $posts->foto)}}" ></a>
                     @elseif ($posts->post == "artikel")
-                    <a href=""> <img src="{{asset('artikel/' . $posts->foto)}}" ></a>
+                    <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('artikel/' . $posts->foto)}}" ></a>
                     @endif
                     <div class="slider_article">
                     <h2><a class="slider_tittle" href="/detail/post/{{$posts->id}}">{{$posts->judul}}</a></h2>
@@ -49,21 +49,21 @@
                                 @if ($postss->post == "kultum")
                                 <a href="/detail/post/{{$postss->id}}" class="media-left"><iframe width="100" height="50" src="{{$postss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
                                 @elseif ($postss->post == "aisyiyah")
-                                <a href="" class="media-left"> <img src="{{asset('aisyiyah/' . $postss->foto)}}" ></a>
+                                <a href="/detail/post/{{$postss->id}}" class="media-left"> <img src="{{asset('aisyiyah/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "tokoh")
-                                <a href=""class="media-left"> <img src="{{asset('tokoh/' . $postss->foto)}}" ></a>
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('tokoh/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "milenial")
-                                <a href=""class="media-left"> <img src="{{asset('milenial/' . $postss->foto)}}" ></a>
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('milenial/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "kiprah")
-                                <a href=""class="media-left"> <img src="{{asset('kiprah/' . $postss->foto)}}" ></a>
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('kiprah/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "seni")
-                                <a href=""class="media-left"> <img src="{{asset('seni/' . $postss->foto)}}" ></a>
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('seni/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "saudagar")
-                                <a href=""class="media-left"> <img src="{{asset('saudagar/' . $postss->foto)}}" ></a>
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('saudagar/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "infopersyarikatan")
-                                <a href=""class="media-left"> <img src="{{asset('infopersyarikatan/' . $postss->foto)}}" ></a>
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('infopersyarikatan/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "artikel")
-                                <a href=""class="media-left"> <img src="{{asset('artikel/' . $postss->foto)}}" ></a>
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('artikel/' . $postss->foto)}}" ></a>
                                 @endif
                                 <div class="media-body"> <a href="/detail/post/{{$postss->id}}" class="catg_title">{{Str::limit($postss->caption, 50, ' Baca Selengkapnya')}}</a> </div>
                             </div>

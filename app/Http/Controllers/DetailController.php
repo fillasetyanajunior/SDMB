@@ -12,8 +12,9 @@ use App\Postmilenial;
 use App\Postsaudagar;
 use App\Postseni;
 use App\Posttokoh;
-use App\Comment;
 use App\Postsejarah;
+use App\Post;
+use App\Comment;
 
 class DetailController extends Controller
 {
@@ -26,6 +27,7 @@ class DetailController extends Controller
         $data['postaisyiyahss'] = Postaisyiyah::paginate(5);
         return view('detail.aisyiyah',$data,compact('postaisyiyah'));
     }
+
     public function artikel(Postartikel $postartikel)
     {
         $data['title'] = 'Suara Dakwah Muhammadiyah Buleleng';
@@ -35,6 +37,7 @@ class DetailController extends Controller
         $data['postartikelss'] = Postartikel::paginate(3);
         return view('detail.artikel',$data,compact('postartikel'));
     }
+
     public function tokoh(Posttokoh $posttokoh)
     {
         $data['title'] = 'Suara Dakwah Muhammadiyah Buleleng';
@@ -44,6 +47,7 @@ class DetailController extends Controller
         $data['posttokohss'] = Posttokoh::paginate(3);
         return view('detail.tokoh',$data,compact('posttokoh'));
     }
+
     public function infopersyarikatan(Postinfopersyarikatan $postinfopersyarikatan)
     {
         $data['title'] = 'Suara Dakwah Muhammadiyah Buleleng';
@@ -53,6 +57,7 @@ class DetailController extends Controller
         $data['postinfopersyarikatanss'] = Postinfopersyarikatan::paginate(3);
         return view('detail.infopersyarikatan',$data,compact('postinfopersyarikatan'));
     }
+
     public function kiprah(Postkiprah $postkiprah)
     {
         $data['title'] = 'Suara Dakwah Muhammadiyah Buleleng';
@@ -62,6 +67,7 @@ class DetailController extends Controller
         $data['postkiprahss'] = Postkiprah::paginate(3);
         return view('detail.kiprah',$data,compact('postkiprah'));
     }
+
     public function kultum(Postkultum $postkultum)
     {
         $data['title'] = 'Suara Dakwah Muhammadiyah Buleleng';
@@ -71,6 +77,7 @@ class DetailController extends Controller
         $data['postkultumss'] = Postkultum::paginate(3);
         return view('detail.kultum',$data,compact('postkultum'));
     }
+
     public function milenial(Postmilenial $postmilenial)
     {
         $data['title'] = 'Suara Dakwah Muhammadiyah Buleleng';
@@ -80,6 +87,7 @@ class DetailController extends Controller
         $data['postmilenialss'] = Postmilenial::paginate(3);
         return view('detail.milenial',$data,compact('postmilenial'));
     }
+
     public function saudagar(Postsaudagar $postsaudagar)
     {
         $data['title'] = 'Suara Dakwah Muhammadiyah Buleleng';
@@ -89,6 +97,7 @@ class DetailController extends Controller
         $data['postsaudagarss'] = Postsaudagar::paginate(3);
         return view('detail.saudagar',$data,compact('postsaudagar'));
     }
+
     public function seni(Postseni $postseni)
     {
         $data['title'] = 'Suara Dakwah Muhammadiyah Buleleng';
@@ -98,6 +107,7 @@ class DetailController extends Controller
         $data['postseniss'] = Postseni::paginate(3);
         return view('detail.seni',$data,compact('postseni'));
     }
+
     public function sejarah(Postsejarah $postsejarah)
     {
         $data['title'] = 'Suara Dakwah Muhammadiyah Buleleng';
@@ -105,6 +115,15 @@ class DetailController extends Controller
         $data['postsejarahss'] = Postsejarah::paginate(3);
         return view('detail.sejarah',$data,compact('postsejarah'));
     }
+
+    public function post(Post $post)
+    {
+        $data['title'] = 'Suara Dakwah Muhammadiyah Buleleng';
+        $data['posts'] = Post::paginate(3);
+        $data['postss'] = Post::paginate(3);
+        return view('detail.post',$data,compact('post'));
+    }
+
     public function store(Request $request)
     {
         Comment::create([
