@@ -39,7 +39,7 @@ class ProfileController extends Controller
                         'avatar' => $foto,
                         ]);
     
-            return redirect()->back()->with('status','Seni Budaya Berhasil Di Update');
+            return redirect()->back()->with('status','Profile Berhasil Di Update');
         }else{
             return redirect()->back()->with('status','File Nothing');
         }
