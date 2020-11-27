@@ -23,7 +23,7 @@ class UtamaController extends Controller
         $data['postaisyiyah'] = Postaisyiyah::orderBy('updated_at','desc')->paginate(3);
         $data['postartikel'] = Postartikel::orderBy('updated_at','desc')->paginate(3);
         $data['posts'] = Post::orderBy('updated_at','desc')->paginate(3);
-        $data['postss'] = Post::orderBy('updated_at','desc')->paginate(6);
+        $data['postss'] = Post::orderBy('updated_at','desc')->paginate(4);
         $data['postinfopersyarikatan'] = Postinfopersyarikatan::orderBy('updated_at','desc')->paginate(3);
         $data['postkiprah'] = Postkiprah::orderBy('updated_at','desc')->paginate(1);
         $data['postkultum'] = Postkultum::orderBy('updated_at','desc')->paginate(4);
