@@ -36,7 +36,7 @@
                         <img class="img-center" src="{{asset('artikel/' . $post->foto)}}" ></a>
                         @endif
                         <p class="text-justify">{{$post->caption}}</p>
-                        
+
                         <button class="btn default-btn">Milenial Muhammadiyah</button>
                         <button class="btn btn-red">Kultum</button>
                         <button class="btn btn-yellow">Tokoh</button>
@@ -52,7 +52,26 @@
                     <ul class="spost_nav wow fadeInDown animated">
                         @foreach ($posts as $posts)    
                         <li>
-                            <div class="media"> <a class="media-left" href="/detail/post/{{$posts->id}}"> <img src="{{asset('/' . $posts->foto)}}" alt=""> </a>
+                            <div class="media"> 
+                                @if ($posts->post == "kultum")
+                                <a href="/detail/post/{{$posts->id}}" class="media-left"><iframe width="100" height="50" src="{{$posts->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                                @elseif ($posts->post == "aisyiyah")
+                                <a href="/detail/post/{{$posts->id}}" class="media-left"> <img src="{{asset('aisyiyah/' . $posts->foto)}}" ></a>
+                                @elseif ($posts->post == "tokoh")
+                                <a href="/detail/post/{{$posts->id}}"class="media-left"> <img src="{{asset('tokoh/' . $posts->foto)}}" ></a>
+                                @elseif ($posts->post == "milenial")
+                                <a href="/detail/post/{{$posts->id}}"class="media-left"> <img src="{{asset('milenial/' . $posts->foto)}}" ></a>
+                                @elseif ($posts->post == "kiprah")
+                                <a href="/detail/post/{{$posts->id}}"class="media-left"> <img src="{{asset('kiprah/' . $posts->foto)}}" ></a>
+                                @elseif ($posts->post == "seni")
+                                <a href="/detail/post/{{$posts->id}}"class="media-left"> <img src="{{asset('seni/' . $posts->foto)}}" ></a>
+                                @elseif ($posts->post == "saudagar")
+                                <a href="/detail/post/{{$posts->id}}"class="media-left"> <img src="{{asset('saudagar/' . $posts->foto)}}" ></a>
+                                @elseif ($posts->post == "infopersyarikatan")
+                                <a href="/detail/post/{{$posts->id}}"class="media-left"> <img src="{{asset('infopersyarikatan/' . $posts->foto)}}" ></a>
+                                @elseif ($posts->post == "artikel")
+                                <a href="/detail/post/{{$posts->id}}"class="media-left"> <img src="{{asset('artikel/' . $posts->foto)}}" ></a>
+                                @endif
                                 <div class="media-body"> <a class="catg_title" href="/detail/post/{{$posts->id}}"> {{$posts->judul}}</a> </div>
                             </div>
                         </li>
@@ -69,7 +88,26 @@
                     <ul class="spost_nav">
                         @foreach ($postss as $postss)
                         <li>
-                            <div class="media"> <a class="media-left" href="/detail/post/{{$postss->id}}"> <img src="{{asset('/' . $postss->foto)}}" alt=""> </a>
+                            <div class="media"> 
+                                @if ($postss->post == "kultum")
+                                <a href="/detail/post/{{$postss->id}}" class="media-left"><iframe width="100" height="50" src="{{$postss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                                @elseif ($postss->post == "aisyiyah")
+                                <a href="/detail/post/{{$postss->id}}" class="media-left"> <img src="{{asset('aisyiyah/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "tokoh")
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('tokoh/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "milenial")
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('milenial/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "kiprah")
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('kiprah/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "seni")
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('seni/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "saudagar")
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('saudagar/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "infopersyarikatan")
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('infopersyarikatan/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "artikel")
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('artikel/' . $postss->foto)}}" ></a>
+                                @endif
                                 <div class="media-body"> <a class="catg_title" href="/detail/post/{{$postss->id}}"> {{$postss->judul}}</a> </div>
                             </div>
                         </li>
