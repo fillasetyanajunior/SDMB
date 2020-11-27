@@ -42,8 +42,8 @@
                 <h2><span>Latest Post</span></h2>
                 <div class="latest_post_container">
                     <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
-                    @foreach ($postss as $postss)    
                     <ul class="latest_postnav">
+                        @foreach ($postss as $postss)    
                         <li>
                             <div class="media">
                                 @if ($postss->post == "kultum")
@@ -65,11 +65,11 @@
                                 @elseif ($postss->post == "artikel")
                                 <a href=""class="media-left"> <img src="{{asset('artikel/' . $postss->foto)}}" ></a>
                                 @endif
-                            <div class="media-body"> <a href="/detail/post/{{$postss->id}}" class="catg_title">{{Str::limit($postss->caption, 50, ' Baca Selengkapnya')}}</a> </div>
+                                <div class="media-body"> <a href="/detail/post/{{$postss->id}}" class="catg_title">{{Str::limit($postss->caption, 50, ' Baca Selengkapnya')}}</a> </div>
                             </div>
                         </li>
+                        @endforeach
                     </ul>
-                    @endforeach
                     <div id="next-button"><i class="fa  fa-chevron-down"></i></div>
                 </div>
             </div>
@@ -187,7 +187,7 @@
                             @foreach ($postinfopersyarikatan as $postinfopersyarikatan)    
                             <ul class="spost_nav">
                                 <li>
-                                    <div class="media wow fadeInDown"> <a href="/detail/postinfopersyarikatan/{{$postinfopersyarikatan->id}}" class="media-left"> <img alt="{{asset('infopersyarikatan/' . $postinfopersyarikatan->foto)}}" src=""> </a>
+                                    <div class="media wow fadeInDown"> <a href="/detail/postinfopersyarikatan/{{$postinfopersyarikatan->id}}" class="media-left"> <img alt="" src="{{asset('infopersyarikatan/' . $postinfopersyarikatan->foto)}}"> </a>
                                         <div class="media-body"> <a href="/detail/postinfopersyarikatan/{{$postinfopersyarikatan->id}}" class="catg_title"> {{$postinfopersyarikatan->judul}} </a> </div>
                                     </div>
                                 </li>
