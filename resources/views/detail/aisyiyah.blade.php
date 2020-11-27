@@ -16,7 +16,7 @@
                     <h1>{{$postaisyiyah->judul}}</h1>
                     <div class="post_commentbox"><span><i class="fa fa-calendar"></i>{{$postaisyiyah->updated_at->diffForHumans()}}</span> <a href="/aisyiyah"><i class="fa fa-tags"></i>Aisyiyah</a> </div>
                     <div class="single_page_content"> <img class="img-center" src="{{asset('aisyiyah/' . $postaisyiyah->foto)}}" alt="">
-                        <p>{{$postaisyiyah->caption}}</p>
+                        <p class="text-justify">{{$postaisyiyah->caption}}</p>
                         <button class="btn default-btn">Milenial Muhammadiyah</button>
                         <button class="btn btn-red">Kultum</button>
                         <button class="btn btn-yellow">Tokoh</button>

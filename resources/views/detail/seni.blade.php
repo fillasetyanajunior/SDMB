@@ -16,7 +16,7 @@
                     <h1>{{$postseni->judul}}</h1>
                     <div class="post_commentbox"><span><i class="fa fa-calendar"></i>{{$postseni->updated_at->diffForHumans()}}</span> <a href="/seni"><i class="fa fa-tags"></i>Seni-Budaya</a> </div>
                     <div class="single_page_content"> <img class="img-center" src="{{asset('seni/' . $postseni->foto)}}" alt="">
-                        <p>{{$postseni->caption}}</p>
+                        <p class="text-justify">{{$postseni->caption}}</p>
                         <button class="btn default-btn">Milenial Muhammadiyah</button>
                         <button class="btn btn-red">Kultum</button>
                         <button class="btn btn-yellow">Tokoh</button>

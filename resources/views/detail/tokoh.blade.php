@@ -16,7 +16,7 @@
                     <h1>{{$posttokoh->judul}}</h1>
                     <div class="post_commentbox"><span><i class="fa fa-calendar"></i>{{$posttokoh->updated_at->diffForHumans()}}</span> <a href="/tokoh"><i class="fa fa-tags"></i>Tokoh Muhammadiyah</a> </div>
                     <div class="single_page_content"> <img class="img-center" src="{{asset('tokoh/' . $posttokoh->foto)}}" alt="">
-                        <p>{{$posttokoh->caption}}</p>
+                        <p class="text-justify">{{$posttokoh->caption}}</p>
                         <button class="btn default-btn">Milenial Muhammadiyah</button>
                         <button class="btn btn-red">Kultum</button>
                         <button class="btn btn-yellow">Tokoh</button>

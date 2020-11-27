@@ -16,7 +16,7 @@
                     <h1>{{$postkultum->judul}}</h1>
                     <div class="post_commentbox"><span><i class="fa fa-calendar"></i>{{$postkultum->updated_at->diffForHumans()}}</span> <a href="/kultum"><i class="fa fa-tags"></i>Kultum</a> </div>
                     <div class="single_page_content"> <iframe width="560" height="315"src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <p>{{$postkultum->caption}}</p>
+                        <p class="text-justify">{{$postkultum->caption}}</p>
                         <button class="btn default-btn">Milenial Muhammadiyah</button>
                         <button class="btn btn-red">Kultum</button>
                         <button class="btn btn-yellow">Tokoh</button>
