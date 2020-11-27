@@ -12,8 +12,22 @@
                 <div class="single_iteam"> 
                     @if ($posts->post == "kultum")
                     <a href=""><iframe width="650" height="500" src="{{$posts->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-                    @else
-                    <a href=""> <img src="{{asset($posts->foto)}}" alt=""></a>
+                    @elseif ($posts->post == "aisyiyah")
+                    <a href=""> <img src="{{asset('aisyiyah/' . $posts->foto)}}" ></a>
+                    @elseif ($posts->post == "tokoh")
+                    <a href=""> <img src="{{asset('tokoh/' . $posts->foto)}}" ></a>
+                    @elseif ($posts->post == "milenial")
+                    <a href=""> <img src="{{asset('milenial/' . $posts->foto)}}" ></a>
+                    @elseif ($posts->post == "kiprah")
+                    <a href=""> <img src="{{asset('kiprah/' . $posts->foto)}}" ></a>
+                    @elseif ($posts->post == "seni")
+                    <a href=""> <img src="{{asset('seni/' . $posts->foto)}}" ></a>
+                    @elseif ($posts->post == "saudagar")
+                    <a href=""> <img src="{{asset('saudagar/' . $posts->foto)}}" ></a>
+                    @elseif ($posts->post == "infopersyarikatan")
+                    <a href=""> <img src="{{asset('infopersyarikatan/' . $posts->foto)}}" ></a>
+                    @elseif ($posts->post == "artikel")
+                    <a href=""> <img src="{{asset('artikel/' . $posts->foto)}}" ></a>
                     @endif
                     <div class="slider_article">
                     <h2><a class="slider_tittle" href="/detail/post/{{$posts->id}}">{{$posts->judul}}</a></h2>
@@ -34,8 +48,22 @@
                             <div class="media">
                                 @if ($postss->post == "kultum")
                                 <a href="/detail/post/{{$postss->id}}" class="media-left"><iframe width="100" height="50" src="{{$postss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-                                @else
-                                <a href="/detail/post/{{$postss->id}}" class="media-left"> <img src="{{asset($postss->foto)}}" alt=""></a>
+                                @elseif ($postss->post == "aisyiyah")
+                                <a href="" class="media-left"> <img src="{{asset('aisyiyah/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "tokoh")
+                                <a href=""class="media-left"> <img src="{{asset('tokoh/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "milenial")
+                                <a href=""class="media-left"> <img src="{{asset('milenial/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "kiprah")
+                                <a href=""class="media-left"> <img src="{{asset('kiprah/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "seni")
+                                <a href=""class="media-left"> <img src="{{asset('seni/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "saudagar")
+                                <a href=""class="media-left"> <img src="{{asset('saudagar/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "infopersyarikatan")
+                                <a href=""class="media-left"> <img src="{{asset('infopersyarikatan/' . $postss->foto)}}" ></a>
+                                @elseif ($postss->post == "artikel")
+                                <a href=""class="media-left"> <img src="{{asset('artikel/' . $postss->foto)}}" ></a>
                                 @endif
                             <div class="media-body"> <a href="/detail/post/{{$postss->id}}" class="catg_title">{{Str::limit($postss->caption, 50, ' Baca Selengkapnya')}}</a> </div>
                             </div>
@@ -58,7 +86,7 @@
                         @foreach ($posttokoh as $posttokoh )    
                         <ul class="business_catgnav  wow fadeInDown">
                             <li>
-                                <figure class="bsbig_fig"> <a href="/detail/posttokoh/{{$posttokoh->id}}" class="featured_img"> <img alt="" src="{{asset($posttokoh->foto)}}"> <span class="overlay"></span> </a>
+                                <figure class="bsbig_fig"> <a href="/detail/posttokoh/{{$posttokoh->id}}" class="featured_img"> <img alt="" src="{{asset('tokoh/' . $posttokoh->foto)}}"> <span class="overlay"></span> </a>
                                     <figcaption> <a href="/detail/posttokoh/{{$posttokoh->id}}">{{$posttokoh->name}}</a> </figcaption>
                                     <p>{{$posttokoh->caption}}</p>
                                 </figure>
@@ -70,7 +98,7 @@
                         @foreach ($posttokohs as $posttokohs)    
                         <ul class="spost_nav">
                             <li>
-                                <div class="media wow fadeInDown"> <a href="/detail/posttokoh/{{$posttokoh->id}}" class="media-left"> <img alt="" src="{{asset($posttokohs->foto)}}"> </a>
+                                <div class="media wow fadeInDown"> <a href="/detail/posttokoh/{{$posttokoh->id}}" class="media-left"> <img alt="" src="{{asset('tokoh/' . $posttokohs->foto)}}"> </a>
                                     <div class="media-body"> <a href="/detail/posttokoh/{{$posttokoh->id}}" class="catg_title"> {{$posttokohs->name}}</a> </div>
                                 </div>
                             </li>
@@ -85,7 +113,7 @@
                             @foreach ($postmilenial as $postmilenial)    
                             <ul class="spost_nav">
                                 <li>
-                                    <div class="media wow fadeInDown"> <a href="/detail/postmilenial/{{$postmilenial->id}}" class="media-left"> <img alt="" src="{{asset($postmilenial->foto)}}"> </a>
+                                    <div class="media wow fadeInDown"> <a href="/detail/postmilenial/{{$postmilenial->id}}" class="media-left"> <img alt="" src="{{asset('milenial/' . $postmilenial->foto)}}"> </a>
                                         <div class="media-body"> <a href="/detail/postmilenial/{{$postmilenial->id}}" class="catg_title"> {{$postmilenial->judul}}</a> </div>
                                     </div>
                                 </li>
@@ -99,7 +127,7 @@
                             @foreach ($postkiprah as $postkiprah)    
                             <ul class="spost_nav">
                                 <li>
-                                    <div class="media wow fadeInDown"> <a href="/detail/postkiprah/{{$postkiprah->id}}" class="media-left"> <img alt="" src="{{asset($postkiprah->foto)}}"> </a>
+                                    <div class="media wow fadeInDown"> <a href="/detail/postkiprah/{{$postkiprah->id}}" class="media-left"> <img alt="" src="{{asset('kiprah/' . $postkiprah->foto)}}"> </a>
                                         <div class="media-body"> <a href="/detail/postkiprah/{{$postkiprah->id}}" class="catg_title"> {{$postkiprah->judul}}</a> </div>
                                     </div>
                                 </li>
@@ -115,7 +143,7 @@
                             @foreach ($postseni as $postseni)    
                             <ul class="spost_nav">
                                 <li>
-                                    <div class="media wow fadeInDown"> <a href="/detail/postseni/{{$postseni->id}}" class="media-left"> <img alt="" src="{{asset($postseni->foto)}}"> </a>
+                                    <div class="media wow fadeInDown"> <a href="/detail/postseni/{{$postseni->id}}" class="media-left"> <img alt="" src="{{asset('seni/' . $postseni->foto)}}"> </a>
                                         <div class="media-body"> <a href="/detail/postseni/{{$postseni->id}}" class="catg_title"> {{$postseni->judul}}</a> </div>
                                     </div>
                                 </li>
@@ -129,7 +157,7 @@
                             @foreach ($postaisyiyah as $postaisyiyah)    
                             <ul class="spost_nav">
                                 <li>
-                                    <div class="media wow fadeInDown"> <a href="/detail/postaisyiyah/{{$postaisyiyah->id}}" class="media-left"> <img alt="" src="{{asset($postaisyiyah->foto)}}"> </a>
+                                    <div class="media wow fadeInDown"> <a href="/detail/postaisyiyah/{{$postaisyiyah->id}}" class="media-left"> <img alt="" src="{{asset('aisyiyah/' . $postaisyiyah->foto)}}"> </a>
                                         <div class="media-body"> <a href="/detail/postaisyiyah/{{$postaisyiyah->id}}" class="catg_title"> {{$postaisyiyah->judul}}</a> </div>
                                     </div>
                                 </li>
@@ -145,7 +173,7 @@
                             @foreach ($postsaudagar as $postsaudagar)    
                             <ul class="spost_nav">
                                 <li>
-                                    <div class="media wow fadeInDown"> <a href="/detail/postsaudagar/{{$postsaudagar->id}}" class="media-left"> <img alt="" src="{{asset($postsaudagar->foto)}}"> </a>
+                                    <div class="media wow fadeInDown"> <a href="/detail/postsaudagar/{{$postsaudagar->id}}" class="media-left"> <img alt="" src="{{asset('saudagar/' . $postsaudagar->foto)}}"> </a>
                                         <div class="media-body"> <a href="/detail/postsaudagar/{{$postsaudagar->id}}" class="catg_title"> {{$postsaudagar->judul}}</a> </div>
                                     </div>
                                 </li>
@@ -159,7 +187,7 @@
                             @foreach ($postinfopersyarikatan as $postinfopersyarikatan)    
                             <ul class="spost_nav">
                                 <li>
-                                    <div class="media wow fadeInDown"> <a href="/detail/postinfopersyarikatan/{{$postinfopersyarikatan->id}}" class="media-left"> <img alt="{{asset($postinfopersyarikatan->foto)}}" src=""> </a>
+                                    <div class="media wow fadeInDown"> <a href="/detail/postinfopersyarikatan/{{$postinfopersyarikatan->id}}" class="media-left"> <img alt="{{asset('infopersyarikatan/' . $postinfopersyarikatan->foto)}}" src=""> </a>
                                         <div class="media-body"> <a href="/detail/postinfopersyarikatan/{{$postinfopersyarikatan->id}}" class="catg_title"> {{$postinfopersyarikatan->judul}} </a> </div>
                                     </div>
                                 </li>
@@ -203,7 +231,7 @@
                 <ul class="spost_nav">
                     @foreach ($postartikel as $postartikel)     
                     <li>
-                        <div class="media wow fadeInDown"> <a href="/detail/postartikel/{{$postartikel->id}}" class="media-left"> <img alt="" src="{{asset($postartikel->foto)}}"> </a>
+                        <div class="media wow fadeInDown"> <a href="/detail/postartikel/{{$postartikel->id}}" class="media-left"> <img alt="" src="{{asset('artikel/' . $postartikel->foto)}}"> </a>
                             <div class="media-body"> <a href="/detail/postartikel/{{$postartikel->id}}" class="catg_title"> {{$postartikel->judul}}</a> </div>
                         </div>
                     </li>
