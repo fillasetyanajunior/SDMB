@@ -14,6 +14,7 @@
                 @endif
                 <h2 class="title">Login</h2>
                 <form method="POST" action="{{ route('login') }}">
+                    @csrf
                     <div class="input-group">
                         <input class="input--style-3 @error('username') is-invalid @enderror" type="text" placeholder="Username" name="username" value="{{old('username')}}">
                     </div>
