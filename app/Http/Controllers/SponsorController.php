@@ -41,7 +41,7 @@ class SponsorController extends Controller
         $validatedData = $request->validate([
             'judul' => 'required',
             'caption' => 'required',
-            'foto' => 'required|image|max:1024|mimes:jpeg,bmp,png',
+            'foto' => 'required|image|max:7024|mimes:jpeg,bmp,png',
         ]);
 
         $fotos = $request->file('foto');
@@ -92,7 +92,7 @@ class SponsorController extends Controller
         $validatedData = $request->validate([
             'judul' => 'required',
             'caption' => 'required',
-            'foto' => 'required|image|max:1024|mimes:jpeg,bmp,png',
+            'foto' => 'required|image|max:7024|mimes:jpeg,bmp,png',
         ]);
 
         $fotos = $request->file('foto');

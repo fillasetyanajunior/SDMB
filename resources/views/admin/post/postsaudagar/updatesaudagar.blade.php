@@ -13,16 +13,16 @@
     <div class="container my-3 card">
         <h2 class="col my-3">{{$title}}</h2>
     </div>
-    <form method="POST" action="/postkiprah/{{$postkiprah->id}} " enctype="multipart/form-data">
+    <form method="POST" action="/postsaudagar/{{$postsaudagar->id}} " enctype="multipart/form-data">
         @method('patch')
         @csrf
         <div class="form-group">
             <label for="judul">Judul</label>
-            <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" name="judul" value="{{$postkiprah->judul}}">
+            <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" name="judul" value="{{$postsaudagar->judul}}">
         </div>
         <div class="form-group">
             <label for="caption">Caption</label>
-            <textarea class="form-control @error('caption') is-invalid @enderror" id="caption" rows="3" name="caption">{{$postkiprah->caption}}</textarea>
+            <textarea class="form-control @error('caption') is-invalid @enderror" id="caption" rows="3" name="caption">{{$postsaudagar->caption}}</textarea>
         </div>
         <div class="form-group ">
             <input type="file" class="form-control @error('foto') is-invalid @enderror" name="foto">
