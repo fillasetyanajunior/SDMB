@@ -50,6 +50,10 @@ Route::get('/sejarah', 'ContentController@sejarah');
 
 Route::middleware(['auth','adminuser'])->group(function(){
 
+    // Profile
+    Route::get('/profile', 'ProfileController@edit');
+    Route::patch('/profile/{user}', 'ProfileController@update');
+
     // Post Artikel
     Route::get('/postartikel' ,'PostartikelController@index');
     Route::get('/postartikel/create' ,'PostartikelController@create');

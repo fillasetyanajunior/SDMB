@@ -61,7 +61,7 @@
             <img src="{{asset(Auth::user()->avatar)}}" alt="">{{Auth::user()->name}}
             </a>
             <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item"  href="javascript:;"> Profile</a>
+            <a class="dropdown-item"  href="/profile"> Profile</a>
             <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">

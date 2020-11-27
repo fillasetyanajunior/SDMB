@@ -71,7 +71,7 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'password' => Hash::make($data['password']),
             'password1' => Crypt::encryptString($data['password']),
-            'avatar' => "profile/dafault.jpg",
+            'avatar' => '',
             'is_active' => 0,
         ]);
 
