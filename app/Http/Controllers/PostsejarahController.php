@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Postsejarah;
+use App\Post;
 use Illuminate\Http\Request;
 use File;
 
