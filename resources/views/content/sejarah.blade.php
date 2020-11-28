@@ -16,7 +16,7 @@
                     @foreach ($postsejarah as $postsejarah)
                     <div class="single_page_content"> <img class="img-center" src="{{asset('sejarah/' . $postsejarah->foto)}}" alt="">
                         <h1>{{$postsejarah->judul}}</h1>
-                        <p>{{Str::limit($postsejarah->sejarah,200,' ')}}<a href="/detail/postsejarah/{{$postsejarahs->id}}">More</a></p>
+                        <p>{{Str::limit($postsejarah->sejarah,200,' ')}}<a href="/detail/postsejarah/{{$postsejarah->id}}">More</a></p>
                     </div>
                     @endforeach
                     <div class="single_page_content">
