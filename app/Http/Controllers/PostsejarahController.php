@@ -41,7 +41,7 @@ class PostsejarahController extends Controller
     {
         $validatedData = $request->validate([
             'judul' => 'required',
-            'caption' => 'required',
+            'sejarah' => 'required',
             'foto' => 'required|image|max:7024|mimes:jpeg,bmp,png,jpg',
         ]);
 
@@ -57,13 +57,13 @@ class PostsejarahController extends Controller
         Post::create([
             'post' => 'sejarah',
             'judul' => $request->judul,
-            'caption' => $request->caption,
+            'caption' => $request->sejarah,
             'foto' => $foto,
             'link' => '',
         ]);
         Postsejarah::create([
             'judul' => $request->judul,
-            'caption' => $request->caption,
+            'caption' => $request->sejarah,
             'foto' => $foto,
         ]);
 
@@ -104,7 +104,7 @@ class PostsejarahController extends Controller
     {
         $validatedData = $request->validate([
             'judul' => 'required',
-            'caption' => 'required',
+            'sejarah' => 'required',
             'foto' => 'required|image|max:7024|mimes:jpeg,bmp,png,jpg',
         ]);
 
@@ -125,14 +125,14 @@ class PostsejarahController extends Controller
                 ->update([
                     'post' => 'sejarah',
                     'judul' => $request->judul,
-                    'caption' => $request->caption,
+                    'caption' => $request->sejarah,
                     'foto' => $foto,
                     'link' => '',
                 ]);
             Postsejarah::where('id',$postsejarah->id)
                         ->update([
                         'judul' => $request->judul,
-                        'caption' => $request->caption,
+                        'caption' => $request->sejarah,
                         'foto' => $foto,
                         ]);
     
