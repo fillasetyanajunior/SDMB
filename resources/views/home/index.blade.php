@@ -29,7 +29,7 @@
                     @elseif ($posts->post == "artikel")
                     <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('artikel/' . $posts->foto)}}" ></a>
                     @else
-                    <a href="/detail/post/{{$posts->id}}"class="media-left"> <img src="{{asset('sejarah/' . $posts->foto)}}" ></a>
+                    <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('sejarah/' . $posts->foto)}}" ></a>
                     @endif
                     <div class="slider_article">
                     <h2><a class="slider_tittle" href="/detail/post/{{$posts->id}}">{{$posts->judul}}</a></h2>
