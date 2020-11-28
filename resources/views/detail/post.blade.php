@@ -35,7 +35,8 @@
                         @elseif ($post->post == "artikel")
                         <img class="img-center" src="{{asset('artikel/' . $post->foto)}}" ></a>
                         @endif
-                        <p class="text-justify">{{$post->caption}}</p>
+                        
+                        <p class="text-justify"><span>{{$post->caption }}</span></p>
 
                         <button class="btn default-btn">Milenial Muhammadiyah</button>
                         <button class="btn btn-red">Kultum</button>

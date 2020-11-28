@@ -43,7 +43,7 @@ class PosttokohController extends Controller
         $validatedData = $request->validate([
             'nama' => 'required',
             'caption' => 'required',
-            'foto' => 'required|image|max:7024|mimes:jpeg,bmp,png',
+            'foto' => 'required|image|max:7024|mimes:jpeg,bmp,png,jpg',
         ]);
 
         // menyimpan data file yang diupload ke variabel $file
@@ -106,7 +106,7 @@ class PosttokohController extends Controller
         $validatedData = $request->validate([
             'nama' => 'required',
             'caption' => 'required',
-            'foto' => 'required|image|max:7024|mimes:jpeg,bmp,png',
+            'foto' => 'required|image|max:7024|mimes:jpeg,bmp,png,jpg',
         ]);
 
         if (File::exists(public_path('storage/tokoh/'. $posttokoh->foto))) {
