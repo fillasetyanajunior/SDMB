@@ -3,7 +3,7 @@
     @foreach ($postkultum as $postkultum)    
     <ul class="vide_area">
         <li>
-            <img alt="" src="{{asset('kultum/' . $postkultum->foto)}}">
+            <img alt="" src="{{asset('kultum/' . $postkultum->foto)}}" width="200px">
         </li>
     </ul>
     @endforeach
