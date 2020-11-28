@@ -24,8 +24,8 @@
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Foto</th>
+                <th scope="col">Judul</th>
+                <th scope="col">Caption</th>
                 <th scope="col">Aksi</th>
             </tr>
             </thead>
@@ -34,7 +34,7 @@
                 @foreach ($postsejarahs as $postsejarah)    
                 <tr>
                     <th scope="row">{{$i}}</th>
-                    <td>{{$postsejarah->nama}}</td>
+                    <td>{{$postsejarah->title}}</td>
                     <td>{{Str::limit($postsejarah->caption, 300, ' Baca Selanjutnya')}}</td>
                     <td>
                         <a href="/postsejarah/edit/{{$postsejarah->id}}" class="btn btn-warning">Edit</a>
