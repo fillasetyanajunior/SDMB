@@ -11,7 +11,7 @@
                 <div class="single_page">
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>
-                        <li class="active">Kiprah Umat</li>
+                        <li >Kiprah Umat</li>
                     </ol>
                     @foreach ($postkiprah as $postkiprah)    
                     <div class="single_page_content"> <img class="img-center" src="{{'kiprah/' . asset($postkiprah->foto)}}" alt="">

@@ -30,8 +30,7 @@
             <div class="social_area">
                 <ul class="social_nav">
                 <li class="facebook"><a href="https://www.facebook.com/muhammadiyah.buleleng.1"></a></li>
-                <li class="youtube"><a href="#"></a></li>
-                <li class="mail"><a href="#"></a></li>
+                <li class="youtube"><a href="https://www.youtube.com/channel/UCeyPL2TBofNA_aP_z6p40kg?view_as=subscriber"></a></li>
                 </ul>
             </div>
             </div>

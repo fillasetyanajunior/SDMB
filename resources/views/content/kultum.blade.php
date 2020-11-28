@@ -11,7 +11,7 @@
                 <div class="single_page">
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>
-                        <li class="active">Kultum</li>
+                        <li >Kultum</li>
                     </ol>
                     @foreach ($postkultum as $postkultum)    
                     <div class="single_page_content"> <iframe width="560" height="315"src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

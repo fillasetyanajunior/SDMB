@@ -11,7 +11,7 @@
                 <div class="single_page">
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>
-                        <li class="active">Artikel</li>
+                        <li >Artikel</li>
                     </ol>
                     @foreach ($postartikel as $postartikel)    
                     <div class="single_page_content"> <img class="img-center" src="{{asset('artikel/' . $postartikel->foto)}}" alt="">

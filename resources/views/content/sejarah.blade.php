@@ -11,7 +11,7 @@
                 <div class="single_page">
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>
-                        <li class="active">Info Persyarikatan</li>
+                        <li >Info Persyarikatan</li>
                     </ol>
                     @foreach ($postsejarah as $postsejarah)
                     <div class="single_page_content"> <img class="img-center" src="{{asset('sejarah/' . $postsejarah->foto)}}" alt="">

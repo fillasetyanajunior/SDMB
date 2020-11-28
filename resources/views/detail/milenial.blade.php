@@ -11,7 +11,7 @@
                 <div class="single_page">
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>
-                        <li class="active">Detail</li>
+                        <li >Detail</li>
                     </ol>
                     <h1>{{$postmilenial->judul}}</h1>
                     <div class="post_commentbox"><span><i class="fa fa-calendar"></i>{{$postmilenial->updated_at->diffForHumans()}}</span> <a href="/milenial"><i class="fa fa-tags"></i>Milenial Muhammadiyah</a> </div>

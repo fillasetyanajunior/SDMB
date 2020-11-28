@@ -60,14 +60,14 @@
         <div id="navbar" class="navbar-collapse collapse" style="background-color: green" >
             <ul class=" navbar-nav main_nav"  >
                 <li class="active"><a href="/"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
-                <li><a href="/seni">Seni-Budaya</a></li>
-                <li><a href="/saudagar">Saudagar</a></li>
-                <li><a href="/milenial">Milenial</a></li>
                 <li><a href="infopersyarikatan">Info Persyarikatan</a></li>
                 <li><a href="/tokoh">Tokoh</a></li>
                 <li><a href="/sejarah">Sejarah</a></li>
-                <li><a href="/kiprah">Kiprah</a></li>
                 <li><a href="/aisyiyah">Aisyiyah</a></li>
+                <li><a href="/seni">Seni-Budaya</a></li>
+                <li><a href="/saudagar">Saudagar</a></li>
+                <li><a href="/milenial">Milenial</a></li>
+                <li><a href="/kiprah">Kiprah</a></li>
                 <li><a href="/artikel">Artikel</a></li>
                 <li><a href="/kultum">Kultum</a></li>
             </ul>

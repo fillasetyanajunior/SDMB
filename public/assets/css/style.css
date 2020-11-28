@@ -195,7 +195,7 @@ figure.effect-layla:hover figcaption::after, figure.effect-layla:hover h2, figur
 .footer_top{background-color:green; color:#ddd; display:inline; float:left; padding:10px 30px 48px; width:100%}
 .footer_widget{display:inline; float:left; width:100%; min-height:310px}
 .footer_widget > h2{border-bottom:3px solid #666; font-family:Oswald,arial,Georgia,serif; font-size:16px; padding:10px 0; text-transform:uppercase}
-.tag_nav{}
+.tag_nav{} 
 .tag_nav li{}
 .tag_nav li a{border-bottom:1px solid #ddd; color:#ccc; display:block; padding:6px 6px 6px 0; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .tag_nav li a:hover{padding-left:10px}
@@ -217,7 +217,7 @@ figure.effect-layla:hover figcaption::after, figure.effect-layla:hover h2, figur
 .post_commentbox{display:inline; float:left; width:100%; border-top:1px solid #ddd; border-bottom:1px solid #ddd; margin-top:20px; padding:5px 0px}
 .post_commentbox a, .post_commentbox span{color:#798992; font-size:11px; margin-right:5px}
 .post_commentbox a > i, .post_commentbox span > i{margin-right:5px}
-.breadcrumb{background-color:#303030; border-radius:0}
+.breadcrumb{background-color:green; border-radius:0}
 .breadcrumb li a{color:#fff}
 .single_page_content{display:inline; float:left; padding-top:20px; width:100%; border-bottom:1px solid #ddd; padding-bottom:20px}
 .single_page_content > img{max-width:100%; width:320px; height:213px; margin-bottom:15px}

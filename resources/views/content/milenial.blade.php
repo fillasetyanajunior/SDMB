@@ -11,7 +11,7 @@
                 <div class="single_page">
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>
-                        <li class="active">Detail</li>
+                        <li >Detail</li>
                     </ol>
                     @foreach ($postmilenial as $postmilenial)    
                     <div class="single_page_content"> <img class="img-center" src="{{asset('milenial/' . $postmilenial->foto)}}" alt="">
