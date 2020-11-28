@@ -18,6 +18,7 @@ class CreatePostkultumTable extends Migration
             $table->string('judul');
             $table->string('caption',10000);
             $table->string('link');
+            $table->string('foto');
             $table->timestamps();
         });
     }

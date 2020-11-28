@@ -11,7 +11,7 @@
                 @foreach ($posts as $posts)    
                 <div class="single_iteam"> 
                     @if ($posts->post == "kultum")
-                    <a href="/detail/post/{{$posts->id}}"><iframe width="650" height="500" src="{{$posts->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                    <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('kultum/' . $posts->foto)}}" ></a>
                     @elseif ($posts->post == "aisyiyah")
                     <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('aisyiyah/' . $posts->foto)}}" ></a>
                     @elseif ($posts->post == "tokoh")
@@ -49,7 +49,7 @@
                         <li>
                             <div class="media">
                                 @if ($postss->post == "kultum")
-                                <a href="/detail/post/{{$postss->id}}" class="media-left"><iframe width="100" height="50" src="{{$postss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                                <a href="/detail/post/{{$postss->id}}" class="media-left"> <img src="{{asset('kultum/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "aisyiyah")
                                 <a href="/detail/post/{{$postss->id}}" class="media-left"> <img src="{{asset('aisyiyah/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "tokoh")

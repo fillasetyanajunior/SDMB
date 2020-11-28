@@ -8,6 +8,6 @@ class Postkultum extends Model
 {
     protected $table = "postkultum";
     protected $fillable = [
-        'judul','caption','link'
+        'judul','caption','link','foto',
     ];
 }

@@ -21,7 +21,7 @@
                         @elseif ($post->post == "aisyiyah")
                         <img class="img-center" src="{{asset('aisyiyah/' . $post->foto)}}" ></a>
                         @elseif ($post->post == "tokoh")
-                        <img src="{{asset('tokoh/' . $post->foto)}}" ></a>
+                        <img class="img-center" src="{{asset('tokoh/' . $post->foto)}}" ></a>
                         @elseif ($post->post == "milenial")
                         <img class="img-center" src="{{asset('milenial/' . $post->foto)}}" ></a>
                         @elseif ($post->post == "kiprah")
@@ -57,7 +57,7 @@
                         <li>
                             <div class="media"> 
                                 @if ($posts->post == "kultum")
-                                <a href="/detail/post/{{$posts->id}}" class="media-left"><iframe width="100" height="50" src="{{$posts->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                                <a href="/detail/post/{{$postss->id}}" class="media-left"> <img src="{{asset('kultum/' . $postss->foto)}}" ></a>
                                 @elseif ($posts->post == "aisyiyah")
                                 <a href="/detail/post/{{$posts->id}}" class="media-left"> <img src="{{asset('aisyiyah/' . $posts->foto)}}" ></a>
                                 @elseif ($posts->post == "tokoh")
@@ -95,7 +95,7 @@
                         <li>
                             <div class="media"> 
                                 @if ($postss->post == "kultum")
-                                <a href="/detail/post/{{$postss->id}}" class="media-left"><iframe width="100" height="50" src="{{$postss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                                <a href="/detail/post/{{$postss->id}}" class="media-left"> <img src="{{asset('kultum/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "aisyiyah")
                                 <a href="/detail/post/{{$postss->id}}" class="media-left"> <img src="{{asset('aisyiyah/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "tokoh")

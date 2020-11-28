@@ -28,6 +28,10 @@
             <label for="link">Link</label>
             <input type="text" class="form-control @error('link') is-invalid @enderror" id="link" name="link" value="{{$postkultum->link}}">
         </div>
+        <div class="form-group ">
+            <input type="file" class="form-control @error('foto') is-invalid @enderror" name="foto">
+            <small >Ukuran File Maksimal 7mb dan Ukuran Squere</small>
+        </div>
         <button type="submit" class="btn btn-primary">Tambah</button>
     </form>
 </div>

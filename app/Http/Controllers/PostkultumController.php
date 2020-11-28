@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Postkultum;
 use App\Post;
 use Illuminate\Http\Request;
+use File;
 
 class PostkultumController extends Controller
 {
@@ -43,19 +44,30 @@ class PostkultumController extends Controller
             'judul' => 'required',
             'caption' => 'required',
             'link' => 'required',
+            'foto' => 'required|image|max:7024|mimes:jpeg,bmp,png,jpg',
         ]);
+
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('foto');
+
+        $foto = time() . '.' . $file->getClientOriginalExtension();
+
+        // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = 'storage/kultum';
+        $file->move($tujuan_upload,$foto);
 
         Post::create([
             'post' => 'kultum',
             'judul' => $request->judul,
             'caption' => $request->caption,
-            'foto' => '',
+            'foto' => $foto,
             'link' => $request->link,
         ]);
         Postkultum::create([
             'judul' => $request->judul,
             'caption' => $request->caption,
             'link' => $request->link,
+            'foto' => $foto,
         ]);
 
         return redirect('/postkultum')->with('status','Kultum Berhasil Di Uplode');
@@ -97,23 +109,40 @@ class PostkultumController extends Controller
             'judul' => 'required',
             'caption' => 'required',
             'link' => 'required',
+            'foto' => 'required|image|max:7024|mimes:jpeg,bmp,png,jpg',
         ]);
-        Post::where("judul",$postkultum->judul)
-            ->update([
-                'post' => 'kultum',
-                'judul' => $request->judul,
-                'caption' => $request->caption,
-                'foto' => '',
-                'link' => $request->link,
-            ]);
-        Postkultum::where('id',$postkultum->id)
-                    ->update([
+        if (File::exists(public_path('storage/kultum/'. $postkultum->foto))) {
+
+            File::delete(public_path('storage/kultum/'. $postkultum->foto));
+            // menyimpan data file yang diupload ke variabel $file
+            $file = $request->file('foto');
+
+            $foto = time() . '.' . $file->getClientOriginalExtension();
+
+            // isi dengan nama folder tempat kemana file diupload
+            $tujuan_upload = 'storage/kultum';
+            $file->move($tujuan_upload,$foto);
+
+            Post::where("judul",$postkultum->judul)
+                ->update([
+                    'post' => 'kultum',
                     'judul' => $request->judul,
                     'caption' => $request->caption,
+                    'foto' => $foto,
                     'link' => $request->link,
-                    ]);
+                ]);
+            Postkultum::where('id',$postkultum->id)
+                        ->update([
+                        'judul' => $request->judul,
+                        'caption' => $request->caption,
+                        'link' => $request->link,
+                        'foto' => $foto,
+                        ]);
 
-        return redirect('/postkultum')->with('status','Kultum Berhasil Di Update');
+            return redirect('/postkultum')->with('status','Kultum Berhasil Di Update');
+        }else{
+            return redirect('/postkultum')->with('status','File Nothing');
+        }
     }
 
     /**
@@ -124,6 +153,7 @@ class PostkultumController extends Controller
      */
     public function destroy(Postkultum $postkultum)
     {
+        File::delete(public_path('storage/kultum/'. $postkultum->foto));
         Postkultum::destroy($postkultum->id);
         Post::destroy($postkultum->judul);
         return redirect('/postkultum')->with('status','Kultum Berhasil Di Hapus');
