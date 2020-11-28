@@ -28,6 +28,8 @@
                     <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('infopersyarikatan/' . $posts->foto)}}" ></a>
                     @elseif ($posts->post == "artikel")
                     <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('artikel/' . $posts->foto)}}" ></a>
+                    @else
+                    <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('sejarah/' . $postss->foto)}}" ></a>
                     @endif
                     <div class="slider_article">
                     <h2><a class="slider_tittle" href="/detail/post/{{$posts->id}}">{{$posts->judul}}</a></h2>
@@ -64,6 +66,8 @@
                                 <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('infopersyarikatan/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "artikel")
                                 <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('artikel/' . $postss->foto)}}" ></a>
+                                @else
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('sejarah/' . $postss->foto)}}" ></a>
                                 @endif
                                 <div class="media-body"> <a href="/detail/post/{{$postss->id}}" class="catg_title">{{Str::limit($postss->caption, 50, ' Baca Selengkapnya')}}</a> </div>
                             </div>

@@ -34,6 +34,8 @@
                         <img class="img-center" src="{{asset('infopersyarikatan/' . $post->foto)}}" ></a>
                         @elseif ($post->post == "artikel")
                         <img class="img-center" src="{{asset('artikel/' . $post->foto)}}" ></a>
+                        @else
+                        <img class="img-center" src="{{asset('sejarah/' . $post->foto)}}" ></a>
                         @endif
                         
                         <p class="text-justify"><span>{{$post->caption }}</span></p>
@@ -72,6 +74,8 @@
                                 <a href="/detail/post/{{$posts->id}}"class="media-left"> <img src="{{asset('infopersyarikatan/' . $posts->foto)}}" ></a>
                                 @elseif ($posts->post == "artikel")
                                 <a href="/detail/post/{{$posts->id}}"class="media-left"> <img src="{{asset('artikel/' . $posts->foto)}}" ></a>
+                                @else
+                                <a href="/detail/post/{{$posts->id}}"class="media-left"> <img src="{{asset('sejarah/' . $posts->foto)}}" ></a>
                                 @endif
                                 <div class="media-body"> <a class="catg_title" href="/detail/post/{{$posts->id}}"> {{$posts->judul}}</a> </div>
                             </div>
@@ -108,6 +112,8 @@
                                 <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('infopersyarikatan/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "artikel")
                                 <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('artikel/' . $postss->foto)}}" ></a>
+                                @else
+                                <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('sejarah/' . $postss->foto)}}" ></a>
                                 @endif
                                 <div class="media-body"> <a class="catg_title" href="/detail/post/{{$postss->id}}"> {{$postss->judul}}</a> </div>
                             </div>

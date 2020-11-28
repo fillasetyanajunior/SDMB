@@ -20,8 +20,10 @@
                     <li><a href="/detail/post/{{$item->id}}"><img src="{{asset('infopersyarikatan/' . $item->foto)}}" >{{$item->judul}}</a></li>
                     @elseif ($item->post == "artikel")
                     <li><a href="/detail/post/{{$item->id}}"><img src="{{asset('artikel/' . $item->foto)}}" >{{$item->judul}}</a></li>
+                    @elseif ($item->post == "sejarah")
+                    <a href="/detail/post/{{$postss->id}}"class="media-left"> <img src="{{asset('sejarah/' . $postss->foto)}}" ></a>
                     @else
-
+                    
                     @endif
                 @endforeach
             </ul>
