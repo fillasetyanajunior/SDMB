@@ -21,7 +21,7 @@
                     @elseif ($item->post == "artikel")
                     <li><a href="/detail/post/{{$item->id}}"><img src="{{asset('artikel/' . $item->foto)}}" >{{$item->judul}}</a></li>
                     @elseif ($item->post == "sejarah")
-                    <a href="/detail/post/{{$item->id}}"class="media-left"> <img src="{{asset('sejarah/' . $item->foto)}}" ></a>
+                    <a href="/detail/post/{{$item->id}}"> <img src="{{asset('sejarah/' . $item->foto)}}" ></a>
                     @else
                     
                     @endif
