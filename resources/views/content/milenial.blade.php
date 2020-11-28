@@ -16,7 +16,7 @@
                     @foreach ($postmilenial as $postmilenial)    
                     <div class="single_page_content"> <img class="img-center" src="{{asset('milenial/' . $postmilenial->foto)}}" alt="">
                         <h1>{{$postmilenial->judul}}</h1>
-                        <p>{{Str::limit($postmilenial->caption,200,' Baca Selengkapnya')}}</p>
+                        <p>{{Str::limit($postmilenial->caption,200,' ')}}<a href="/detail/postmilenial/{{$postmilenials->id}}">More</a></p>
                     </div>
                     @endforeach
                     <div class="single_page_content">

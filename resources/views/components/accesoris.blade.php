@@ -3,7 +3,7 @@
     @foreach ($postkultum as $postkultum)    
     <ul class="vide_area">
         <li>
-            <iframe src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img alt="" src="{{asset('kultum/' . $postkultum->foto)}}">
         </li>
     </ul>
     @endforeach

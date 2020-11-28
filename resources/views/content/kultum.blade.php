@@ -16,7 +16,7 @@
                     @foreach ($postkultum as $postkultum)    
                     <div class="single_page_content"> <iframe width="560" height="315"src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <h1>{{$postkultum->judul}}</h1>
-                        <p>{{Str::limit($postkultum->caption,200,' Baca Selengkapnya')}}</p>
+                        <p>{{Str::limit($postkultum->caption,200,' ')}}<a href="/detail/postkultum/{{$postkultums->id}}">More</a></p>
                     </div>
                     @endforeach
                     <div class="single_page_content">

@@ -16,7 +16,7 @@
                     @foreach ($postkiprah as $postkiprah)    
                     <div class="single_page_content"> <img class="img-center" src="{{'kiprah/' . asset($postkiprah->foto)}}" alt="">
                         <h1>{{$postkiprah->judul}}</h1>
-                        <p>{{Str::limit($postkiprah->caption,200,' Baca Selengkapnya')}}</p>
+                        <p>{{Str::limit($postkiprah->caption,200,' ')}}<a href="/detail/postkiprah/{{$postkiprahs->id}}">More</a></p>
                     </div>
                     @endforeach
                     <div class="single_page_content">

@@ -206,7 +206,7 @@
                         @foreach ($postkultum as $postkultum )    
                         <ul class="business_catgnav  wow fadeInDown">
                             <li>
-                                <figure class="bsbig_fig"> <a href="/detail/postkultum/{{$postkultum->id}}" class="featured_img"> <iframe width="350" height="170" src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span> </a>
+                                <figure class="bsbig_fig"> <a href="/detail/postkultum/{{$postkultum->id}}" class="featured_img"> <img alt="" src="{{asset('kultum/' . $postkultum->foto)}}"> </a>
                                     <figcaption> <a href="/detail/postkultum/{{$postkultum->id}}">{{$postkultum->judul}}</a> </figcaption>
                                     <p>{{Str::limit($postkultum->caption,200,' Baca Selengkapnya')}}</p>
                                 </figure>
@@ -218,7 +218,7 @@
                         @foreach ($postkultums as $postkultums)    
                         <ul class="spost_nav">
                             <li>
-                                <div class="media wow fadeInDown"> <a href="/detail/postkultum/{{$postkultums->id}}" class="media-left"><iframe width="100" height="50" src="{{$postkultums->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                                <div class="media wow fadeInDown"> <a href="/detail/postkultum/{{$postkultums->id}}" class="media-left"> <img alt="" src="{{asset('kultum/' . $postkultums->foto)}}"></a>
                                     <div class="media-body"> <a href="/detail/postkultum/{{$postkultums->id}}" class="catg_title"> {{$postkultums->judul}}</a> </div>
                                 </div>
                             </li>

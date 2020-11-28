@@ -16,7 +16,7 @@
                     @foreach ($postartikel as $postartikel)    
                     <div class="single_page_content"> <img class="img-center" src="{{asset('artikel/' . $postartikel->foto)}}" alt="">
                         <h1>{{$postartikel->judul}}</h1>
-                        <p>{{Str::limit($postartikel->caption,200,' Baca Selengkapnya')}}</p>
+                        <p>{{Str::limit($postartikel->caption,200,' ')}}<a href="/detail/postartikel/{{$postartikels->id}}">More</a></p>
                     </div>
                     @endforeach
                     <div class="single_page_content">

@@ -16,7 +16,7 @@
                     @foreach ($posttokoh as $posttokoh)    
                     <div class="single_page_content"> <img class="img-center" src="{{asset('tokoh/' . $posttokoh->foto)}}" alt="">
                         <h1>{{$posttokoh->judul}}</h1>
-                        <p>{{Str::limit($posttokoh->caption,200,' Baca Selengkapnya')}}</p>
+                        <p>{{Str::limit($posttokoh->caption,200,' ')}}<a href="/detail/posttokoh/{{$posttokohs->id}}">More</a></p>
                     </div>
                     @endforeach
                     <div class="single_page_content">
