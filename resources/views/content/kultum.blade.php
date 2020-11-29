@@ -65,11 +65,11 @@
                         @foreach ($postkultumss as $postkultumss)
                             <li>
                                 @if (!$postkultumss->link)
-                                <a class="media-left" href="/detail/postkultum/{{$postkultumss->id}}"><img src="{{asset('kultum/' . $postkultumss->foto)}}" ></a>
+                                <a href="/detail/postkultum/{{$postkultumss->id}}"><img width="200px" src="{{asset('kultum/' . $postkultumss->foto)}}" ></a>
                                 @elseif ($postkultumss->link === '-')
-                                <a class="media-left" href="/detail/postkultum/{{$postkultumss->id}}"><img src="{{asset('kultum/' . $postkultumss->foto)}}" ></a>
+                                <a href="/detail/postkultum/{{$postkultumss->id}}"><img width="200px" src="{{asset('kultum/' . $postkultumss->foto)}}" ></a>
                                 @else
-                                <a class="media-left" href="/detail/postkultum/{{$postkultumss->id}}"><iframe src="{{$postkultumss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                                <a href="/detail/postkultum/{{$postkultumss->id}}"><iframe src="{{$postkultumss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
                                 @endif
                                 <div class="media-body"> <a class="catg_title" href="/detail/postkultum/{{$postkultumss->id}}"> {{$postkultumss->judul}}</a> </div>
                             </li>
