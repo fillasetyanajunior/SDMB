@@ -11,7 +11,11 @@
                 @foreach ($posts as $posts)    
                 <div class="single_iteam"> 
                     @if ($posts->post == "kultum")
-                    <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('kultum/' . $posts->foto)}}" ></a>
+                        @if ($posts->link)
+                            <a href="/detail/post/{{$posts->id}}"><iframe width="700px" height="600px" src="{{$posts->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        @else
+                            <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('kultum/' . $posts->foto)}}" ></a>
+                        @endif
                     @elseif ($posts->post == "aisyiyah")
                     <a href="/detail/post/{{$posts->id}}"> <img src="{{asset('aisyiyah/' . $posts->foto)}}" ></a>
                     @elseif ($posts->post == "tokoh")
@@ -49,7 +53,11 @@
                         <li>
                             <div class="media">
                                 @if ($postss->post == "kultum")
-                                <a href="/detail/post/{{$postss->id}}" class="media-left"> <img src="{{asset('kultum/' . $postss->foto)}}" ></a>
+                                    @if ($postss->link)
+                                        <a class="media-left" href="/detail/post/{{$postss->id}}"><iframe width="90px" height="60px" src="{{$postss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                                    @else
+                                        <a class="media-left" href="/detail/post/{{$posts->id}}"> <img src="{{asset('kultum/' . $posts->foto)}}" ></a>
+                                    @endif
                                 @elseif ($postss->post == "aisyiyah")
                                 <a href="/detail/post/{{$postss->id}}" class="media-left"> <img src="{{asset('aisyiyah/' . $postss->foto)}}" ></a>
                                 @elseif ($postss->post == "tokoh")
@@ -206,7 +214,12 @@
                         @foreach ($postkultum as $postkultum )    
                         <ul class="business_catgnav  wow fadeInDown">
                             <li>
-                                <figure class="bsbig_fig"> <a href="/detail/postkultum/{{$postkultum->id}}" class="featured_img"> <img alt="" src="{{asset('kultum/' . $postkultum->foto)}}"> </a>
+                                <figure class="bsbig_fig"> <a href="/detail/postkultum/{{$postkultum->id}}" class="featured_img"> 
+                                    @if ($postkultum->link)
+                                        <iframe src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    @else
+                                        <img src="{{asset('kultum/' . $postkultum->foto)}}" >
+                                    @endif
                                     <figcaption> <a href="/detail/postkultum/{{$postkultum->id}}">{{$postkultum->judul}}</a> </figcaption>
                                     <p>{{Str::limit($postkultum->caption,200,' Baca Selengkapnya')}}</p>
                                 </figure>
@@ -218,7 +231,12 @@
                         @foreach ($postkultums as $postkultums)    
                         <ul class="spost_nav">
                             <li>
-                                <div class="media wow fadeInDown"> <a href="/detail/postkultum/{{$postkultums->id}}" class="media-left"> <img alt="" src="{{asset('kultum/' . $postkultums->foto)}}"></a>
+                                <div class="media wow fadeInDown"> 
+                                    @if ($postkultums->link)
+                                        <a class="media-left" href="/detail/postkultum/{{$postkultums->id}}"><iframe width="90px" height="60px" src="{{$postkultums->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                                    @else
+                                        <a class="media-left" href="/detail/postkultum/{{$postkultums->id}}"><img src="{{asset('kultum/' . $postkultums->foto)}}" ></a>
+                                    @endif
                                     <div class="media-body"> <a href="/detail/postkultum/{{$postkultums->id}}" class="catg_title"> {{$postkultums->judul}}</a> </div>
                                 </div>
                             </li>

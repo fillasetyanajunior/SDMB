@@ -7,7 +7,7 @@
 <section id="contentSection">
     <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8">
-            <div class="left_content">a
+            <div class="left_content">
                 <div class="single_page">
                     <ol class="breadcrumb">
                         <li><a href="/">Home</a></li>

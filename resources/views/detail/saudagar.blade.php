@@ -73,8 +73,11 @@
                     <ul class="spost_nav wow fadeInDown animated">
                         @foreach ($postsaudagars as $postsaudagars)    
                         <li>
-                            <div class="media"> <a class="media-left" href="/detail/postsaudagar/{{$postsaudagars->id}}"> <img src="{{asset('saudagar/' . $postsaudagars->foto)}}" alt=""> </a>
-                                <div class="media-body"> <a class="catg_title" href="/detail/postsaudagar/{{$postsaudagars->id}}"> {{$postsaudagars->judul}}</a> </div>
+                            <div class="media"> 
+                                <a class="media-left" href="/detail/postsaudagar/{{$postsaudagars->id}}"> <img src="{{asset('saudagar/' . $postsaudagars->foto)}}" alt=""> </a>
+                                <div class="media-body"> 
+                                    <a class="catg_title" href="/detail/postsaudagar/{{$postsaudagars->id}}"> {{$postsaudagars->judul}}</a> 
+                                </div>
                             </div>
                         </li>
                         @endforeach
@@ -90,8 +93,11 @@
                     <ul class="spost_nav">
                         @foreach ($postsaudagarss as $postsaudagarss)
                         <li>
-                            <div class="media"> <a class="media-left" href="/detail/postsaudagar/{{$postsaudagarss->id}}"> <img src="{{asset('saudagar/' . $postsaudagarss->foto)}}" alt=""> </a>
-                                <div class="media-body"> <a class="catg_title" href="/detail/postsaudagar/{{$postsaudagarss->id}}"> {{$postsaudagarss->judul}}</a> </div>
+                            <div class="media"> 
+                                <a class="media-left" href="/detail/postsaudagar/{{$postsaudagarss->id}}"> <img src="{{asset('saudagar/' . $postsaudagarss->foto)}}" alt=""> </a>
+                                <div class="media-body"> 
+                                    <a class="catg_title" href="/detail/postsaudagar/{{$postsaudagarss->id}}"> {{$postsaudagarss->judul}}</a> 
+                                </div>
                             </div>
                         </li>
                         @endforeach

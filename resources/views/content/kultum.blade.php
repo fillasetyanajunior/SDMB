@@ -14,7 +14,12 @@
                         <li >Kultum</li>
                     </ol>
                     @foreach ($postkultum as $postkultum)    
-                    <div class="single_page_content"> <iframe width="560" height="315"src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="single_page_content"> 
+                        @if ($postkultum->link)
+                            <a href="/detail/postkultum/{{$postkultum->id}}"><iframe width="700px" height="400px" src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        @else
+                            <a href="/detail/postkultum/{{$postkultum->id}}"><img src="{{asset('kultum/' . $postkultum->foto)}}" ></a>
+                        @endif
                         <h1>{{$postkultum->judul}}</h1>
                         <p>{{Str::limit($postkultum->caption,200,' ')}}<a href="/detail/postkultum/{{$postkultum->id}}">More</a></p>
                     </div>
@@ -33,14 +38,16 @@
                     <div class="related_post">
                     <h2>Related Post <i class="fa fa-thumbs-o-up"></i></h2>
                     <ul class="spost_nav wow fadeInDown animated">
-                        <ul class="vide_area">
                             @foreach ($postkultums as $postkultums)    
                             <li>
-                                <iframe src="{{$postkultums->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                @if ($postkultums->link)
+                                    <a class="media-left" href="/detail/postkultum/{{$postkultums->id}}"><iframe width="90px" height="60px" src="{{$postkultums->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                                @else
+                                    <a class="media-left" href="/detail/postkultum/{{$postkultums->id}}"><img src="{{asset('kultum/' . $postkultums->foto)}}" ></a>
+                                @endif
                                 <div class="media-body"> <a class="catg_title" href="/detail/postkultum/{{$postkultums->id}}"> {{$postkultums->judul}}</a> </div>
                             </li>
                             @endforeach
-                        </ul>
                     </ul>
                     </div>
                 </div>
@@ -53,7 +60,13 @@
                     <ul class="vide_area">
                         @foreach ($postkultumss as $postkultumss)
                             <li>
-                                <iframe src="{{$postkultumss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                @if ($postkultumss->link)
+                                <a class="media-left" href="/detail/postkultum/{{$postkultumss->id}}"><iframe src="{{$postkultumss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                                @elseif ($postkultumss->foto && $postkultumss->link)
+                                <a class="media-left" href="/detail/postkultum/{{$postkultumss->id}}"><iframe src="{{$postkultumss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                                @else
+                                <a class="media-left" href="/detail/postkultum/{{$postkultumss->id}}"><img src="{{asset('kultum/' . $postkultumss->foto)}}" ></a>
+                                @endif
                                 <div class="media-body"> <a class="catg_title" href="/detail/postkultum/{{$postkultumss->id}}"> {{$postkultumss->judul}}</a> </div>
                             </li>
                         @endforeach

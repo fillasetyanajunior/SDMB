@@ -16,7 +16,7 @@
                     <h1>{{$postsejarah->judul}}</h1>
                     <div class="post_commentbox"><span><i class="fa fa-calendar"></i>{{$postsejarah->updated_at->diffForHumans()}}</span> <a href="/sejarah"><i class="fa fa-tags"></i>Sejarah</a> </div>
                     <div class="single_page_content"> <img class="img-center" src="{{asset('sejarah/' . $postsejarah->foto)}}" alt="">
-                        <p class="text-justify">{{$postsejarah->sejarah}}</p>
+                        <p class="text-justify">{{$postsejarah->caption}}</p>
                         <button class="btn default-btn">Milenial Muhammadiyah</button>
                         <button class="btn btn-red">Kultum</button>
                         <button class="btn btn-yellow">Tokoh</button>

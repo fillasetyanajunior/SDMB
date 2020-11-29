@@ -45,7 +45,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="header_bottom">
                 <div class="logo_area">
-                    <a href="/" class="logo"><img src="{{url('assets/images/logo2.jpeg')}}" alt=""></a>
+                    <a href="/" class="logo"><img src="{{url('assets/images/logo2.jpg')}}" alt=""></a>
                 </div>
                 <div class="add_banner"><a href="/"><img src="{{url('assets/images/Banner1.jpeg')}}" alt=""></a></div>
             </div>
@@ -83,8 +83,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="footer_widget wow fadeInLeftBig">
                 <h2></h2>
-                <img src="{{url('assets/images/logo2.jpeg')}}" alt="" width="340px">
-                <p>Menyuarakan Kebaikan</p>
+                <img src="{{url('assets/images/logo2.jpg')}}" alt="" width="340px">
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">

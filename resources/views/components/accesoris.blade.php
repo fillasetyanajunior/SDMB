@@ -3,7 +3,7 @@
     @foreach ($postkultum as $postkultum)    
     <ul class="vide_area">
         <li>
-            <img alt="" src="{{asset('kultum/' . $postkultum->foto)}}" width="200px">
+            <img class="img-center" alt="" src="{{asset('kultum/' . $postkultum->foto)}}" width="200px">
         </li>
     </ul>
     @endforeach
@@ -13,8 +13,8 @@
     @foreach ($sponsor as $sponsor )    
     <ul class="business_catgnav  wow fadeInDown">
         <li>
-            <figure class="bsbig_fig"> <a href="pages/single_page.html" class="featured_img"> <img alt="" src="{{asset($sponsor->foto)}}"> <span class="overlay"></span> </a>
-                <figcaption> <a href="pages/single_page.html">{{$sponsor->judul}}</a> </figcaption>
+            <figure class="bsbig_fig"> <a href="" class="featured_img"> <img alt="" src="{{asset($sponsor->foto)}}"> <span class="overlay"></span> </a>
+                <figcaption> <a href="">{{$sponsor->judul}}</a> </figcaption>
                 <p>{{$sponsor->caption}}</p>
             </figure>
         </li>
