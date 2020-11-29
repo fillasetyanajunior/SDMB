@@ -17,7 +17,13 @@
                     <div class="post_commentbox"><span><i class="fa fa-calendar"></i>{{$post->updated_at->diffForHumans()}}</span> <a href="/"><i class="fa fa-tags"></i>Post</a> </div>
                     <div class="single_page_content">
                         @if ($post->post == "kultum")
-                        <iframe width="100" height="50" src="{{$post->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                            @if (!$post->link)
+                            <img class="img-center" src="{{asset('kultum/' . $post->foto)}}" >
+                            @elseif ($post->link === '-')
+                            <img class="img-center" src="{{asset('kultum/' . $post->foto)}}" >
+                            @else
+                            <iframe class="img-center" width="560" height="315"src="{{$post->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            @endif
                         @elseif ($post->post == "aisyiyah")
                         <img class="img-center" src="{{asset('aisyiyah/' . $post->foto)}}" ></a>
                         @elseif ($post->post == "tokoh")
