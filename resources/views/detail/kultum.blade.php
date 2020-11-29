@@ -16,12 +16,12 @@
                     <h1>{{$postkultum->judul}}</h1>
                     <div class="post_commentbox"><span><i class="fa fa-calendar"></i>{{$postkultum->updated_at->diffForHumans()}}</span> <a href="/kultum"><i class="fa fa-tags"></i>Kultum</a> </div>
                     <div class="single_page_content"> 
-                        @if ($postkultum->link)
-                            <iframe class="img-center" width="560" height="315"src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        @elseif ($postkultum->foto && $postkultum->link)
-                            <iframe class="img-center" width="560" height="315"src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        @if (!$postkultum->link)
+                        <img class="img-center" src="{{asset('kultum/' . $postkultum->foto)}}" >
+                        @elseif ($postkultumss->link === '-')
+                        <img class="img-center" src="{{asset('kultum/' . $postkultum->foto)}}" >
                         @else
-                            <img class="img-center" src="{{asset('kultum/' . $postkultum->foto)}}" >
+                        <iframe class="img-center" width="560" height="315"src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         @endif
                         <p class="text-justify">{{$postkultum->caption}}</p>
                         <button class="btn default-btn">Milenial Muhammadiyah</button>
@@ -80,12 +80,12 @@
                     <ul class="spost_nav wow fadeInDown animated">
                             @foreach ($postkultums as $postkultums)    
                             <li>
-                                @if ($postkultums->link)
-                                <a class="media-left" href="/detail/postkultum/{{$postkultums->id}}"><iframe src="{{$postkultums->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-                                @elseif ($postkultums->foto && $postkultums->link)
-                                <a class="media-left" href="/detail/postkultum/{{$postkultums->id}}"><iframe src="{{$postkultums->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-                                @else
+                                @if (!$postkultums->link)
                                 <a class="media-left" href="/detail/postkultum/{{$postkultums->id}}"><img src="{{asset('kultum/' . $postkultums->foto)}}" ></a>
+                                @elseif ($postkultums->link === '-')
+                                <a class="media-left" href="/detail/postkultum/{{$postkultums->id}}"><img src="{{asset('kultum/' . $postkultums->foto)}}" ></a>
+                                @else
+                                <a class="media-left" href="/detail/postkultum/{{$postkultums->id}}"><iframe src="{{$postkultums->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
                                 @endif
                                 <div class="media-body"> <a class="catg_title" href="/detail/postkultum/{{$postkultums->id}}"> {{$postkultums->judul}}</a> </div>
                             </li>
@@ -102,12 +102,12 @@
                     <ul class="vide_area">
                         @foreach ($postkultumss as $postkultumss)
                         <li>
-                            @if ($postkultumss->link)
-                            <a class="media-left" href="/detail/postkultum/{{$postkultumss->id}}"><iframe src="{{$postkultumss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-                            @elseif ($postkultumss->foto && $postkultumss->link)
-                            <a class="media-left" href="/detail/postkultum/{{$postkultumss->id}}"><iframe src="{{$postkultumss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-                            @else
+                            @if (!$postkultumss->link)
                             <a class="media-left" href="/detail/postkultum/{{$postkultumss->id}}"><img src="{{asset('kultum/' . $postkultumss->foto)}}" ></a>
+                            @elseif ($postkultumss->link === '-')
+                            <a class="media-left" href="/detail/postkultum/{{$postkultumss->id}}"><img src="{{asset('kultum/' . $postkultumss->foto)}}" ></a>
+                            @else
+                            <a class="media-left" href="/detail/postkultum/{{$postkultumss->id}}"><iframe src="{{$postkultumss->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
                             @endif
                             <div class="media-body"> <a class="catg_title" href="/detail/postkultum/{{$postkultumss->id}}"> {{$postkultumss->judul}}</a> </div>
                         </li>

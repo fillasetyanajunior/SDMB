@@ -3,7 +3,13 @@
     @foreach ($postkultum as $postkultum)    
     <ul class="vide_area">
         <li>
-            <img class="img-center" alt="" src="{{asset('kultum/' . $postkultum->foto)}}" width="200px">
+            @if (!$postkultum->link)
+            <img class="img-center" src="{{asset('kultum/' . $postkultum->foto)}}" >
+            @elseif ($postkultum->link === '-')
+            <img class="img-center" src="{{asset('kultum/' . $postkultum->foto)}}" >
+            @else
+            <iframe width="90px" height="60px" class="img-center" src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            @endif
         </li>
     </ul>
     @endforeach
