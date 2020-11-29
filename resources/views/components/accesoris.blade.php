@@ -4,9 +4,9 @@
     <ul class="vide_area">
         <li>
             @if (!$postkultum->link)
-            <img class="img-center" src="{{asset('kultum/' . $postkultum->foto)}}" >
+            <img class="img-center" src="{{asset('kultum/' . $postkultum->foto)}}" width="200px">
             @elseif ($postkultum->link === '-')
-            <img class="img-center" src="{{asset('kultum/' . $postkultum->foto)}}" >
+            <img class="img-center" src="{{asset('kultum/' . $postkultum->foto)}}" width="200px">
             @else
             <iframe width="90px" height="60px" class="img-center" src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             @endif
