@@ -33,7 +33,7 @@
         <li><a href="/seni">Seni-Budaya</a></li>
         <li><a href="/saudagar">Saudagar</a></li>
         <li><a href="/milenial">Milenial</a></li>
-        <li><a href="infopersyarikatan">Info Persyarikatan</a></li>
+        <li><a href="/infopersyarikatan">Info Persyarikatan</a></li>
         <li><a href="/tokoh">Tokoh</a></li>
         <li><a href="/sejarah">Sejarah</a></li>
         <li><a href="/kiprah">Kiprah</a></li>
