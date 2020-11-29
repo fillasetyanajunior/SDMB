@@ -16,7 +16,7 @@
                     <h1>{{$postkiprah->judul}}</h1>
                     <div class="post_commentbox"><span><i class="fa fa-calendar"></i>{{$postkiprah->updated_at->diffForHumans()}}</span> <a href="/kiprah"><i class="fa fa-tags"></i>Kiprah</a> </div>
                     <div class="single_page_content"> <img class="img-center" src="{{asset('kiprah/' . $postkiprah->foto)}}" alt="">
-                        <p class="text-justify">{{$postkiprah->caption}}</p>
+                        <p class="text-justify">{!!nl2br(str_replace("{}", " \n", $postkiprah->caption))!!}</p>
                         <button class="btn default-btn">Milenial Muhammadiyah</button>
                         <button class="btn btn-red">Kultum</button>
                         <button class="btn btn-yellow">Tokoh</button>

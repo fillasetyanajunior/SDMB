@@ -16,7 +16,7 @@
                     <h1>{{$postsaudagar->judul}}</h1>
                     <div class="post_commentbox"><span><i class="fa fa-calendar"></i>{{$postsaudagar->updated_at->diffForHumans()}}</span> <a href="/saudagar"><i class="fa fa-tags"></i>Saudagar Muhammadiyah</a> </div>
                     <div class="single_page_content"> <img class="img-center" src="{{asset('saudagar/' . $postsaudagar->foto)}}" alt="">
-                        <p class="text-justify">{{$postsaudagar->caption}}</p>
+                        <p class="text-justify">{!!nl2br(str_replace("{}", " \n", $postsaudagar->caption))!!}</p>
                         <button class="btn default-btn">Milenial Muhammadiyah</button>
                         <button class="btn btn-red">Kultum</button>
                         <button class="btn btn-yellow">Tokoh</button>

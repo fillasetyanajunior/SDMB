@@ -44,7 +44,7 @@
                         <img class="img-center" src="{{asset('sejarah/' . $post->foto)}}" ></a>
                         @endif
                         
-                        <p class="text-justify"><span>{{$post->caption }}</span></p>
+                        <p class="text-justify">{!!nl2br(str_replace("{}", " \n", $post->caption))!!}</p>
 
                         <button class="btn default-btn">Milenial Muhammadiyah</button>
                         <button class="btn btn-red">Kultum</button>

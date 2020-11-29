@@ -23,7 +23,9 @@
                         @else
                         <iframe class="img-center" width="560" height="315"src="{{$postkultum->link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         @endif
-                        <p class="text-justify">{{$postkultum->caption}}</p>
+                        
+                        <p class="text-justify">{!!nl2br(str_replace("{}", " \n", $postkultum->caption))!!}</p>
+
                         <button class="btn default-btn">Milenial Muhammadiyah</button>
                         <button class="btn btn-red">Kultum</button>
                         <button class="btn btn-yellow">Tokoh</button>
