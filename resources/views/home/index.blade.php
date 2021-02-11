@@ -103,8 +103,8 @@
                         <ul class="business_catgnav  wow fadeInDown">
                             <li>
                                 <figure class="bsbig_fig"> <a href="/detail/posttokoh/{{$posttokoh->id}}" class="featured_img"> <img alt="" src="{{asset('tokoh/' . $posttokoh->foto)}}"> <span class="overlay"></span> </a>
-                                    <figcaption> <a href="/detail/posttokoh/{{$posttokoh->id}}">{{$posttokoh->name}}</a> </figcaption>
-                                    <p>{{$posttokoh->caption}}</p>
+                                    <figcaption> <a href="/detail/posttokoh/{{$posttokoh->id}}">{{$posttokoh->nama}}</a> </figcaption>
+                                    <p>{{Str::limit($posttokoh->caption . 'Baca Selengkapnya')}}</p>
                                 </figure>
                             </li>
                         </ul>
@@ -115,7 +115,7 @@
                         <ul class="spost_nav">
                             <li>
                                 <div class="media wow fadeInDown"> <a href="/detail/posttokoh/{{$posttokoh->id}}" class="media-left"> <img alt="" src="{{asset('tokoh/' . $posttokohs->foto)}}"> </a>
-                                    <div class="media-body"> <a href="/detail/posttokoh/{{$posttokoh->id}}" class="catg_title"> {{$posttokohs->name}}</a> </div>
+                                    <div class="media-body"> <a href="/detail/posttokoh/{{$posttokoh->id}}" class="catg_title"> {{$posttokohs->nama}}</a> </div>
                                 </div>
                             </li>
                         </ul>
